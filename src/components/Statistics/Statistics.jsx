@@ -1,5 +1,5 @@
 
-import PropTypes, { string } from 'prop-types'
+import PropTypes from 'prop-types'
 import { Container } from './Statistics.styled'
 
 export const Statistics = ({ title, stats }) => {
