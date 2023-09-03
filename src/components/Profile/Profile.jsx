@@ -1,10 +1,11 @@
+import { Photo } from "./Profile.styled"
+import PropTypes from 'prop-types'
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-
   return (
     <div className="profile">
     <div className="description">
-      <img
+      <Photo
         src={avatar}
         alt="User avatar"
         className="avatar"
@@ -30,4 +31,13 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     </ul>
     </div>
     )
+}
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.object,
+
 }

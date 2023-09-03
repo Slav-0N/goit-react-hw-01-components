@@ -1,6 +1,8 @@
 import { HeaderPaint } from "./Show-header"
+import PropTypes from 'prop-types'
 
-export const Statistics = ({title, stats}) => {
+export const Statistics = ({ title, stats }) => {
+  console.log(stats)
   return (
     <section className="statistics">
       <HeaderPaint title={ title } />
@@ -16,5 +18,10 @@ export const Statistics = ({title, stats}) => {
       </ul>
     </section>
   )
+}
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
 }
 
