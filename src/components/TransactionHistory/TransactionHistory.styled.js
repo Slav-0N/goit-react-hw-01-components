@@ -7,7 +7,7 @@ export const TrColor = styled.tr`
 
 export const TransactionTable = styled.table`
   background-color: #f0f5f5;
-  margin: 200px auto;
+  margin: 100px auto;
   width: 600px;
   text-align: center;
 

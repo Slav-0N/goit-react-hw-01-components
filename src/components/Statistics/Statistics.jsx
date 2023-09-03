@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Container } from './Statistics.styled'
 
 export const Statistics = ({ title, stats }) => {
-  console.log(stats)
   return (
     <Container className="statistics">
       <HeaderPaint title={ title } />
@@ -27,7 +26,7 @@ const HeaderPaint = ({title}) => {
     write = <h2 className="title">{title}</h2>
     
   }
-  console.log("title >>>", title)
+
   return write
 } 
 

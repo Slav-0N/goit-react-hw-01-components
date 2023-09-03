@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import { TransactionTable, TrColor } from './TransactionHistory.styled'
 
 export const TransactionHistory = ({ items }) => {
-  console.log(items)
   return (
     <TransactionTable className="transaction-history">
       <thead>

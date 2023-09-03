@@ -8,7 +8,7 @@ align-items: center;
 h2 {
   
   width: 308px;
-  margin: 20px 0 0 0 ;
+  margin: 100px 0 0 0 ;
   padding: 20px 0;
   font-size: 34px;
   border: 1px solid tomato;
@@ -18,7 +18,7 @@ h2 {
 ul {
   padding: 0;
   display: flex;
-  margin: 0;
+  margin: 0 0 100px 0;
   
 
 }
@@ -31,6 +31,5 @@ flex-direction: column;
 text-align: center;
 border: 1px solid tomato;
 padding: 20px 0;
-margin: 20px 0;
 }
 `
