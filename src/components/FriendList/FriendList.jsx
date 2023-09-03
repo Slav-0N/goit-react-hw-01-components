@@ -1,26 +1,33 @@
 import PropTypes from 'prop-types'
+import { ListWithFriends, Markered } from './FriendList.styled'
+
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ListWithFriends className="friend-list">
       <FriendListItem frends={friends} />
-    </ul>
+    </ListWithFriends>
   )
-}
+};
 
 const FriendListItem = ({ frends }) => {
   return frends.map(friend => {
     return (
       <li className="item" key={friend.id}>
-        <span className="status">{ friend.isOnline }</span>
+        <Markered markering={friend.isOnline.toString()}>{friend.isOnline}</Markered>
         <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
-        <p className="name">{ friend.name }</p>
+        <p className="name">{friend.name}</p>
       </li>
     )
   })
-}
+};
 
 FriendList.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.array.isRequired,
+
+};
+
+Markered.propTypes = {
+  markering: PropTypes.string.isRequired
 
 }

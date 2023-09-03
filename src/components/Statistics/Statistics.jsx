@@ -1,10 +1,11 @@
-import { HeaderPaint } from "./Show-header"
-import PropTypes from 'prop-types'
+
+import PropTypes, { string } from 'prop-types'
+import { Container } from './Statistics.styled'
 
 export const Statistics = ({ title, stats }) => {
   console.log(stats)
   return (
-    <section className="statistics">
+    <Container className="statistics">
       <HeaderPaint title={ title } />
       <ul className="stat-list">
           {stats.map(element => {
@@ -16,9 +17,19 @@ export const Statistics = ({ title, stats }) => {
           )
         })}
       </ul>
-    </section>
+    </Container>
   )
 }
+
+const HeaderPaint = ({title}) => {
+  let write = "";
+  if (title !== "" && title !== undefined) {
+    write = <h2 className="title">{title}</h2>
+    
+  }
+  console.log("title >>>", title)
+  return write
+} 
 
 Statistics.propTypes = {
   title: PropTypes.string,
