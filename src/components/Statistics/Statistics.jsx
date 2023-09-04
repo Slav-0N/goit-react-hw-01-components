@@ -5,7 +5,7 @@ import { Container } from './Statistics.styled'
 export const Statistics = ({ title, stats }) => {
   return (
     <Container className="statistics">
-      <HeaderPaint title={ title } />
+      {title && <h2 className="title">{title}</h2>}
       <ul className="stat-list">
           {stats.map(element => {
             return (
@@ -19,16 +19,6 @@ export const Statistics = ({ title, stats }) => {
     </Container>
   )
 }
-
-const HeaderPaint = ({title}) => {
-  let write = "";
-  if (title !== "" && title !== undefined) {
-    write = <h2 className="title">{title}</h2>
-    
-  }
-
-  return write
-} 
 
 Statistics.propTypes = {
   title: PropTypes.string,
