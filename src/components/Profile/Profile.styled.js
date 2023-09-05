@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 export const Photo = styled.img`
   margin: 20px auto;
@@ -7,9 +6,9 @@ export const Photo = styled.img`
   background-color: #98d7ea;
   width: 200px;
   &:hover {
-  background-color: red 
+    background-color: red;
   }
-`
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -17,18 +16,16 @@ export const Container = styled.div`
   align-items: center;
   background-color: #adacb5;
   padding-top: 50px;
-  
-  div{
+
+  div {
     width: 300px;
     background-color: white;
-
   }
   p {
     text-align: center;
     font-size: large;
     margin: 0 0 0 0;
-    
-  } 
+  }
 
   ul {
     width: 300px;
@@ -36,7 +33,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     border: 1px;
-    /* background-color: yellow; */
     padding: 16px 0 16px 0;
     margin-top: 0;
   }
@@ -49,5 +45,5 @@ export const Container = styled.div`
     padding: 20px 0 20px 0;
     background-color: white;
     align-items: center;
-  } 
-`
+  }
+`;

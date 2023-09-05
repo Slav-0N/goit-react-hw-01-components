@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const TrColor = styled.tr`
-  background-color: ${(props) => props.linecolor === 1 ? '#b5e7f5' : '#f5edf1' };
-  
-`
+  background-color: ${props =>
+    props.$linecolor === 1 ? '#b5e7f5' : '#f5edf1'};
+`;
 
 export const TransactionTable = styled.table`
   background-color: #f0f5f5;
@@ -18,6 +18,5 @@ export const TransactionTable = styled.table`
 
   tbody {
     font-size: 20px;
-
   }
-`
+`;

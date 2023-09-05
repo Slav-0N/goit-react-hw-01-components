@@ -1,9 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Markered = styled.span`
-  background-color:  ${ (props)=> props.markering === "true" ? 'green' : 'red' };
-`
-
+  background-color: ${props => (props.$markering === true ? 'green' : 'red')};
+`;
 
 export const ListWithFriends = styled.ul`
   width: 200px;
@@ -19,8 +18,6 @@ export const ListWithFriends = styled.ul`
     padding: 10px 0;
   }
 
-
-
   p {
     font-size: 20px;
     color: black;
@@ -32,4 +29,4 @@ export const ListWithFriends = styled.ul`
     height: 20px;
     border-radius: 50%;
   }
-`
+`;

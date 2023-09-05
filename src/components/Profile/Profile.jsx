@@ -1,37 +1,33 @@
-import { Container, Photo } from "./Profile.styled"
-import PropTypes from 'prop-types'
+import { Container, Photo } from './Profile.styled';
+import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <Container className="profile">
-      <div className="description">
-        <Photo
-          src={avatar}
-          alt="User avatar"
-          className="avatar"
-        />
-          <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-          <p className="location">{ location }</p>
+    <Container>
+      <div>
+        <Photo src={avatar} alt="User avatar" />
+        <p>{username}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </Container>
-    )
-}
+  );
+};
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
@@ -39,5 +35,4 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-
-}
+};
